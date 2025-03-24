@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kumbh Sans", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    display: flex;
+    background: linear-gradient(to right,#c47d13, #e2bb0fb0);
+    justify-content: center;
+    height: 150px;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+#navbar__logo{
+    background-color: #fff;
+    background-image: linear-gradient(to bottom, #c6ffdd, #fbd786, #f7797d);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.navbar__menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+}.navbar__item{
+    height: 80px;
+}
+
+.navbar__links{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: 125px;
+    justify-content: space-between;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.navbar__links:hover{
+    color: #f7797d;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px){
+    .navbar__container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        padding: 0;
+        max-width: 1300px;
+        z-index: 1;
+        width: 100%;
+    }
+    .navbar__menu{
+        display: flex;
+        grid-template-columns: auto;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        transition: all 0.3s ease;
+        opacity: 1;
+        z-index: -1;
+    }
+    .navbar__menu.active{
+        background: #242222;
+        top: 100px;
+        transition: all 0.5s ease;
+        z-index: 99;
+        font-size: 1.5rem;
+    }
+}
